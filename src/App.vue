@@ -49,16 +49,9 @@
 </template>
 
 <script>
-  export default {
-    data: () => ({
-      icons: [
-        'fab fa-facebook',
-        'fab fa-twitter',
-        'fab fa-github'
-      ]
-    })
-  }
-
+export default {
+  name: 'App'
+}
 </script>
 
 <style>
