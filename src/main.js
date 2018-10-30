@@ -2,23 +2,15 @@
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue'
 import App from './App.vue'
-
-// vuerouter
-import VueRouter from 'vue-router'
-import { routes } from './routes'
+import router from './router'
 
 // vuetify
 import 'vuetify/dist/vuetify.min.css'
 import Vuetify from 'vuetify'
 
-Vue.use(VueRouter)
 Vue.use(Vuetify)
 
 Vue.config.productionTip = false
-
-const router = new VueRouter({
-  routes
-})
 
 /* eslint-disable no-new */
 new Vue({
