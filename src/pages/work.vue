@@ -9,11 +9,6 @@
                 <v-card class="md-4 mb-4 pa-2" hover>
                   <v-card-media class="white--text" width="50%" v-bind:src="work.img_url">
                     <v-container fill-height fluid>
-                      <v-layout>
-                        <v-flex xs12 align-end d-flex>
-                          <span class="headline">{{ work.title}}</span>
-                        </v-flex>
-                      </v-layout>
                     </v-container>
                   </v-card-media>
 
@@ -43,7 +38,7 @@ export default {
         {
           title: 'denoise pix2pix',
           content: '生成モデルを用いて画像に付与しているノイズ(ごま塩ノイズ)を除去を行いました.モデルにはGANと呼ばれる生成モデルのひとつであるpix2pixを使用しています．',
-          img_url: '/src/assets/images/denoise-pix2pix.png',
+          img_url: '../assets/images/denoise-pix2pix.png',
           github_url: 'https://github.com/fuchami/denoise_pix2pix'
         },
         {
@@ -55,9 +50,14 @@ export default {
         {
           title: '西野カナ風歌詞生成bot',
           content: 'TwitterAPIを用いて西野カナの楽曲の歌詞を収集し，それらを元に西野カナ風の歌詞をツイートするbotです．現在停止中',
-          img_url: '/src/assets/images/kana.png'
+          img_url: '../assets/images/kana.png'
         }
       ]
+    }
+  },
+  methods: {
+    getImgUrl (img) {
+      return require('../assets/images/' + img)
     }
   }
 }

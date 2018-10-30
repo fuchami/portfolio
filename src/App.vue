@@ -20,9 +20,6 @@
       </v-toolbar>
 
       <v-content>
-          <h1>
-            template
-          </h1>
           <router-view></router-view>
       </v-content>
 
