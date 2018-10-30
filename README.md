@@ -2,6 +2,8 @@
 
 > A Vue.js project
 
+https://fuchami.github.io/portfolio/#/
+
 ## Build Setup
 
 ``` bash

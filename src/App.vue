@@ -1,6 +1,5 @@
 <template>
   <div id=app>
-
     <v-app id="inspire">
       <v-toolbar app>
         <v-toolbar-title>
@@ -20,8 +19,12 @@
           </v-btn>
         </v-toolbar-items>
       </v-toolbar>
-      <v-navigator-drawer app></v-navigator-drawer>
+      <v-navigation-drawer app></v-navigation-drawer>
+
       <v-content>
+          <h1>
+            template
+          </h1>
           <router-view></router-view>
       </v-content>
 
@@ -32,9 +35,6 @@
 
             <v-spacer></v-spacer>
 
-            <v-btn v-for="icon in icons" :key="icon" class="mx-3" dark icon>
-              <v-icon size="24px">{{ icon }}</v-icon>
-            </v-btn>
           </v-card-title>
 
           <v-card-actions class="grey darken-3 justify-center">
@@ -50,7 +50,9 @@
 
 <script>
 export default {
-  name: 'App'
+  data: () => ({
+
+  })
 }
 </script>
 
