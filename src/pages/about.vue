@@ -8,8 +8,6 @@
     <v-app id="inspire">
       <v-flex xs12 sm6 offset-sm3>
         <v-card>
-          <v-img v-bind:src='profile_img' aspect-ratio='2.75'>
-          </v-img>
           <v-card-title primary-title>
             <div>
               <h3 class="headline mb-0">
