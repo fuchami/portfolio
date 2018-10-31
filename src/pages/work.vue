@@ -7,7 +7,7 @@
             <v-flex md8 offset-md2>
               <div v-for="work in works" :key="work.title">
                 <v-card class="md-4 mb-4 pa-2" hover>
-                  <v-card-media class="white--text" width="50%">
+                  <v-card-media class="white--text" width="50%" v-bind:src="getImgUrl(work.img_url)">
                     <v-container fill-height fluid>
                     </v-container>
                   </v-card-media>
