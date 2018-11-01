@@ -19,6 +19,7 @@
                     <p>
                       {{ work.content}}
                     </p>
+                    <img :src="getImgUrl(work.img_url)">
                   </v-card-text>
                 </v-card>
               </div>
@@ -38,26 +39,26 @@ export default {
         {
           title: 'denoise pix2pix',
           content: '生成モデルを用いて画像に付与しているノイズ(ごま塩ノイズ)を除去を行いました.モデルにはGANと呼ばれる生成モデルのひとつであるpix2pixを使用しています．',
-          img_url: '../../docs/static/img/denoise-pix2pix.566d650.png',
+          img_url: 'denoise-pix2pix.png',
           github_url: 'https://github.com/fuchami/denoise_pix2pix'
         },
         {
           title: 'pokemon GAN',
           content: 'DCGANを用いてポケモンのドット絵を生成するモデルを作りました',
-          img_url: '../../docs/static/img/denoise-pix2pix.566d650.png',
+          img_url: 'denoise-pix2pix.png',
           github_url: 'https:/github.com/fuchami/pokeGAN'
         },
         {
           title: '西野カナ風歌詞生成bot',
           content: 'TwitterAPIを用いて西野カナの楽曲の歌詞を収集し，それらを元に西野カナ風の歌詞をツイートするbotです．現在停止中',
-          img_url: '../assets/images/kana.png'
+          img_url: 'kana.png'
         }
       ]
     }
   },
   methods: {
     getImgUrl (img) {
-      return require('../assets/images/' + img)
+      return require('@/assets/images/' + img)
     }
   }
 }
