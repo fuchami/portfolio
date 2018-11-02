@@ -3,10 +3,10 @@
     <v-app id="inspire">
       <v-toolbar app>
         <v-toolbar-title>
-          <router-link to="/">fuchami pages</router-link>
+          fuchami's portfolio
         </v-toolbar-title>
         <v-spacer></v-spacer>
-        <v-toolbar-items class="">
+        <v-toolbar-items class="hidden-sm-and-down">
           <v-btn flat>
             <router-link to="about">about</router-link>
           </v-btn>
