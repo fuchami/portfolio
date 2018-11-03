@@ -10,9 +10,13 @@ import '@mdi/font/css/materialdesignicons.css'
 import '@fortawesome/fontawesome-free/css/all.css'
 import 'vuetify/dist/vuetify.min.css'
 import Vuetify from 'vuetify'
+import colors from 'vuetify/lib/util/colors'
 
 Vue.use(Vuetify, {
-  iconfont: 'fa' || 'mdi' || 'md' || 'fa4'
+  iconfont: 'fa' || 'mdi' || 'md' || 'fa4',
+  primary: colors.cyan.darken2,
+  secondary: colors.white,
+  accent: colors.cyan.darken4
 })
 
 Vue.config.productionTip = false

@@ -6,17 +6,28 @@
           fuchami's portfolio
         </v-toolbar-title>
         <v-spacer></v-spacer>
+
         <v-toolbar-items class="hidden-sm-and-down">
-          <v-btn flat>
-            <router-link to="about">about</router-link>
-          </v-btn>
-          <v-btn flat>
-            <router-link to="skill">skill</router-link>
-          </v-btn>
-          <v-btn flat>
-            <router-link to="work">work</router-link>
+          <v-btn v-for="m in menues" :key="m" flat >
+            <router-link v-bind:to="m.url">{{ m.title }}</router-link>
           </v-btn>
         </v-toolbar-items>
+        <v-menu button left class="hidden-md-and-up">
+          <v-btn slot="activator" dark icon>
+            <v-icon>
+              more_vert
+            </v-icon>
+          </v-btn>
+
+          <v-list>
+            <v-list-tile v-for="m in menues" :key="m">
+              <router-link v-bind:to="m.url">
+              <v-list-tile-title>{{ m.title }}</v-list-tile-title>
+              </router-link>
+            </v-list-tile>
+          </v-list>
+
+        </v-menu>
       </v-toolbar>
 
       <v-content>
@@ -26,12 +37,12 @@
       <v-footer dark height="auto">
         <v-card class="flex" flat tile>
 
-          <v-card-title class="cyan darken-2">
+          <v-card-title>
 
             <v-spacer></v-spacer>
-            <v-btn v-for="icon in icons" :key="icon" class="mx3" dark icon>
+            <v-btn v-for="l in links" :key="l" class="mx3" dark icon>
               <v-icon size="24px">
-                {{ icon }}
+                {{ l.icon }}
               </v-icon>
             </v-btn>
           </v-card-title>
@@ -50,13 +61,31 @@
 <script>
 export default {
   data: () => ({
-    icons: [
-      'fab fa-facebook',
-      'fab fa-twitter',
-      'fab fa-google-plus',
-      'fab fa-linkedin',
-      'fab fa-instagram'
+    links: [
+      {
+        icon: 'fab fa-github',
+        url: ''
+      }
+    ],
+    menues: [
+      {
+        title: 'home',
+        url: './'
+      },
+      {
+        title: 'about',
+        url: './about'
+      },
+      {
+        title: 'skill',
+        url: './skill'
+      },
+      {
+        title: 'work',
+        url: './work'
+      }
     ]
+
   })
 }
 </script>
