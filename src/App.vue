@@ -1,7 +1,7 @@
 <template>
   <div id=app>
     <v-app id="inspire">
-      <v-toolbar app>
+      <v-toolbar app class="cyan darken-2">
         <v-toolbar-title>
           fuchami's portfolio
         </v-toolbar-title>

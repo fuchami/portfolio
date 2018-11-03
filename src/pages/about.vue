@@ -6,6 +6,8 @@
       </h1>
     </div>
     <v-app id="inspire">
+          <v-chip color="primary" text-color="white">Primary</v-chip>
+
       <v-flex xs12 sm6 offset-sm3>
         <v-card>
           <v-card-title primary-title>
