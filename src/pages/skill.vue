@@ -1,10 +1,10 @@
 <template>
   <div id="app">
     <v-app id="inspire">
-      <v-timeline align-top>
+      <v-timeline align-top :dense="$vuetify.breakpoint.mdAndDown" >
         <v-flex xs10 offset-xs1>
-          <v-timeline-item v-for="s in skills" :key="s" fill-dot>
-            <v-card dark v-bind:class="s.class">
+          <v-timeline-item v-for="s in skills" :key="s" fill-dot color="cyan darken-2">
+            <v-card dark v-bind:class="s.class" xs12 md4>
               <v-card-title  class="title">
                   <v-icon size='20' class="mr-3">{{ s.icon }}</v-icon>
                     {{ s.language }}
@@ -37,18 +37,9 @@ export default {
           position: 'left',
           years: '3年',
           clips: [
-            {
-              color: 'red darken-1',
-              name: 'keras'
-            },
-            {
-              color: 'orange',
-              name: 'tensorflow'
-            },
-            {
-              color: 'green',
-              name: 'openCV'
-            }
+            { color: 'red darken-1', name: 'keras' },
+            { color: 'orange', name: 'tensorflow' },
+            { color: 'green', name: 'openCV' }
           ]
         },
         {
@@ -59,10 +50,7 @@ export default {
           position: 'left',
           years: '6ヶ月',
           clips: [
-            {
-              color: 'red darken-4',
-              name: 'Ruby on Rails'
-            }
+            { color: 'red darken-4', name: 'Ruby on Rails' }
           ]
         },
         {
@@ -72,14 +60,8 @@ export default {
           position: 'right',
           years: '2年半',
           clips: [
-            {
-              color: 'green',
-              name: 'openCV'
-            },
-            {
-              color: 'cyan darken-1',
-              name: 'openGL'
-            }
+            { color: 'green', name: 'openCV' },
+            { color: 'cyan darken-1', name: 'openGL' }
           ]
         },
         {
@@ -89,18 +71,11 @@ export default {
           position: 'right',
           years: '2年半',
           clips: [
-            {
-              color: 'green',
-              name: 'openCV'
-            },
-            {
-              color: 'cyan darken-1',
-              name: 'openGL'
-            }
+            { color: 'green', name: 'openCV' },
+            { color: 'cyan darken-1', name: 'openGL' }
           ]
         }
       ]
-
     }
   }
 }
