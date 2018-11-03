@@ -20,9 +20,9 @@
                   </v-flex>
                 </v-layout>
 
-                  <v-chip v-for="c in s.clips" :key='c' v-bind:color="c.color" text-color="white">
-                    {{ c.name }}
-                  </v-chip>
+                <v-chip v-for="c in s.clips" :key='c' v-bind:color="c.color" text-color="white">
+                  {{ c.name }}
+                </v-chip>
 
               </v-container>
             </v-card>
