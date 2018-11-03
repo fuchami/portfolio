@@ -16,6 +16,8 @@
                 fuchami's profile
               </h3>
 
+              <v-icon>twitter</v-icon>
+
             </div>
           </v-card-title>
         </v-card>

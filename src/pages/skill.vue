@@ -59,12 +59,6 @@ export default {
           ]
         },
         {
-          class: 'amber lighten-1',
-          language: 'C',
-          content: '大学の授業で2年半ほど勉強しました．OpenCVを用いた画像処理やOpenGL',
-          position: 'right'
-        },
-        {
           class: 'red darken-4',
           language: 'Ruby',
           content: '現在，アルバイトとして企業向けのWebアプリを実装しておりそのタイミングで勉強しました．基本的にはRuby on Railsを使った実装が多いです.',
@@ -75,6 +69,12 @@ export default {
               name: 'Ruby on Rails'
             }
           ]
+        },
+        {
+          class: 'amber lighten-1',
+          language: 'C',
+          content: '大学の授業で2年半ほど勉強しました．OpenCVを用いた画像処理やOpenGL',
+          position: 'right'
         }
       ]
 
