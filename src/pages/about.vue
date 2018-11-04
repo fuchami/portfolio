@@ -1,27 +1,35 @@
 <template>
   <div id='app'>
-    <div center >
-      <h1>
-        about
-      </h1>
-    </div>
     <v-app id="inspire">
-          <v-chip color="primary" text-color="white">Primary</v-chip>
+      <v-layout justify-center class="my-3">
+        <v-flex xs10 >
+          <v-card class="elevation-7">
+            <v-card-title class="cyan darken-2">
+                <v-icon size="48px">
+                  mdi mdi-account
+                </v-icon>
+                &emsp;&emsp;
+              <div class="hedline white--text">
+                <h1>about me</h1>
+              </div>
+            </v-card-title>
 
-      <v-flex xs12 sm6 offset-sm3>
-        <v-card>
-          <v-card-title primary-title>
-            <div>
-              <h3 class="headline mb-0">
-                fuchami's profile
-              </h3>
+            <v-list v-for="i in items" :key="i" class="transparent">
+              <v-list-tile>
+                <v-btn icon>
+                <v-icon class="cyan--text text--darken-2">{{ i.icon }}</v-icon>
+                </v-btn>
 
-              <v-icon>twitter</v-icon>
+                <v-list-tile-content>
+                    {{ i.title}}
+                </v-list-tile-content>
+              </v-list-tile>
+              <v-divider inset></v-divider>
+            </v-list>
 
-            </div>
-          </v-card-title>
-        </v-card>
-      </v-flex>
+          </v-card>
+        </v-flex>
+      </v-layout>
     </v-app>
   </div>
 </template>
@@ -30,7 +38,15 @@
 export default {
   data () {
     return {
-      profile_img: '/src/assets/images/profile.jpg'
+      items: [
+        {icon: 'mdi-account', title: '二見 悠樹 (futami yuki)'},
+        {icon: 'location_on', title: 'kagoshima'},
+        {icon: 'mdi-cake', title: '1995/04/28'},
+        {icon: 'mdi-school', title: '鹿児島大学院理工学研究科 情報生体システム工学'},
+        {icon: 'mdi-message-alert', title: 'DeepLearning / Web Application'},
+        {icon: 'mdi-email', title: 'sc114057[at]ibe.kagoshima-u.ac.jp'}
+
+      ]
     }
   }
 }

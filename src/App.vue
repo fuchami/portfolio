@@ -12,8 +12,9 @@
             <router-link v-bind:to="m.url" tag="span">{{ m.title }}</router-link>
           </v-btn>
         </v-toolbar-items>
+
         <v-menu button left class="hidden-md-and-up">
-          <v-btn slot="activator" dark icon>
+          <v-btn icon>
             <v-icon>
               more_vert
             </v-icon>
@@ -21,17 +22,18 @@
 
           <v-list>
             <v-list-tile v-for="m in menues" :key="m">
-              <router-link v-bind:to="m.url" tag="span">
+              <router-link v-bind:to="m.url">
               <v-list-tile-title>{{ m.title }}</v-list-tile-title>
               </router-link>
             </v-list-tile>
           </v-list>
+
         </v-menu>
       </v-toolbar>
 
       <v-content>
         <router-view></router-view>
-        </v-content>
+      </v-content>
 
       <v-footer dark height="auto" >
         <v-card class="flex" flat tile>

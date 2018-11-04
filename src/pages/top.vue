@@ -1,9 +1,9 @@
 <template>
   <div id='app'>
     <v-app id="inspire">
-      <v-parallax dark height="800" v-bind:src="getImgUrl(top_img_url)">
+      <v-parallax dark height="600" v-bind:src="getImgUrl(top_img_url)">
         <v-layout align-center column justify-center>
-          <h1 class="display-3 font-weight-thin mb-4">
+          <h1 class="display-3 font-weight-thin mb-4" id="top">
             fuchami's portfolio
           </h1>
           <h2 class="font-weight-thin">
@@ -13,26 +13,9 @@
       </v-parallax>
       <v-spacer></v-spacer>
 
-        <v-layout row wrap justify-center class="my-5">
-          <v-flex xs11 >
-            <v-card class="elevation-7">
-              <v-card-title class="layout justify-center cyan darken-2">
-                <div class="hedline white--text">
-                  <h2>
-                  about me
-                  </h2>
-                </div>
-              </v-card-title>
-              <v-card-text>
-                tetetetetet
-              </v-card-text>
-            </v-card>
-          </v-flex>
-        </v-layout>
-
-      <v-layout row wrap justify-center class="my-4">
+      <v-layout row wrap justify-center class="my-1" id="contact">
         <v-flex md8>
-          <v-card class="elevation-0 transparent">
+          <v-card class="elevation-0 transparent" >
             <v-card-title primary-title class="layout justify-center">
               <div class="headline">Contact</div>
             </v-card-title>
@@ -44,7 +27,7 @@
                 </v-list-tile-action>
                 <v-list-tile-content>
                   <v-list-tile-title>
-                    sc*******[at]ibe.kagoshima-u.ac.
+                    sc114057[at]ibe.kagoshima-u.ac.jp
                   </v-list-tile-title>
                 </v-list-tile-content>
               </v-list-tile>

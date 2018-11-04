@@ -1,6 +1,6 @@
 <template>
   <div id='app'>
-    <v-app id='inspire' >
+    <v-app id="inspire" >
       <v-content>
         <v-container fluid grid-list-xs>
           <v-layout wrap justify-space-around >
