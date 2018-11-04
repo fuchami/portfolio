@@ -84,6 +84,7 @@ export default {
           ]
         },
         {
+          icon: 'fab fa-github',
           class: 'green',
           language: 'Github',
           content: 'gitの基本的な使い方を習得しています．複数人での開発経験もあります．',

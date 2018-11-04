@@ -12,6 +12,12 @@
               <div class="hedline white--text">
                 <h1>about me</h1>
               </div>
+              <v-spacer></v-spacer>
+              <v-btn dark icon v-for="l in links" :key="l" class="mx3" v-bind:href="l.url" target="_blank">
+                <v-icon size="36px">
+                  {{ l.icon }}
+                </v-icon>
+              </v-btn>
             </v-card-title>
 
             <v-list v-for="i in items" :key="i" class="transparent">
@@ -40,12 +46,22 @@ export default {
     return {
       items: [
         {icon: 'mdi-account', title: '二見 悠樹 (futami yuki)'},
+        {icon: 'fas fa-address-card', title: 'fuchami'},
         {icon: 'location_on', title: 'kagoshima'},
         {icon: 'mdi-cake', title: '1995/04/28'},
-        {icon: 'mdi-school', title: '鹿児島大学院理工学研究科 情報生体システム工学'},
+        {icon: 'mdi-school', title: '鹿児島大学院理工学研究科 情報生体システム工学専攻'},
         {icon: 'mdi-heart', title: 'Deep Learning / Machine Learning'},
         {icon: 'mdi-email', title: 'sc114057[at]ibe.kagoshima-u.ac.jp'}
-
+      ],
+      links: [
+        {
+          icon: 'fab fa-blogger',
+          url: 'http://fuchami.hatenadiary.jp/'
+        },
+        {
+          icon: 'fab fa-github',
+          url: 'https://github.com/fuchami'
+        }
       ]
     }
   }

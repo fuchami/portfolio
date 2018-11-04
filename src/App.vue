@@ -34,11 +34,9 @@
 
       <v-footer dark height="auto" >
         <v-card class="flex" flat tile>
-
           <v-card-title class="cyan darken-2">
-
             <v-spacer></v-spacer>
-            <v-btn v-for="l in links" :key="l" class="mx3" dark icon>
+            <v-btn dark icon v-for="l in links" :key="l" class="mx3" v-bind:href="l.url" target="_blank">
               <v-icon size="24px">
                 {{ l.icon }}
               </v-icon>
@@ -62,8 +60,12 @@ export default {
     drawer: false,
     links: [
       {
+        icon: 'fab fa-blogger',
+        url: 'http://fuchami.hatenadiary.jp/'
+      },
+      {
         icon: 'fab fa-github',
-        url: ''
+        url: 'https://github.com/fuchami'
       }
     ],
     menues: [
