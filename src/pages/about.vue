@@ -43,7 +43,7 @@ export default {
         {icon: 'location_on', title: 'kagoshima'},
         {icon: 'mdi-cake', title: '1995/04/28'},
         {icon: 'mdi-school', title: '鹿児島大学院理工学研究科 情報生体システム工学'},
-        {icon: 'mdi-heart', title: 'DeepLearning / Web Application'},
+        {icon: 'mdi-heart', title: 'Deep Learning / Machine Learning'},
         {icon: 'mdi-email', title: 'sc114057[at]ibe.kagoshima-u.ac.jp'}
 
       ]

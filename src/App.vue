@@ -1,7 +1,21 @@
 <template>
   <div id=app>
     <v-app id="inspire">
-      <v-toolbar app class="cyan darken-2">
+      <v-navigation-drawer floating fixed v-model="drawer" app class="hidden-md-and-up">
+          <v-list dense class="pt-0">
+            <v-list-tile v-for="m in menues" :key="m" flat :to="{path: m.url}">
+              <v-list-tile-action>
+                <v-icon>{{ m.icon }}</v-icon>
+              </v-list-tile-action>
+              <v-list-tile-content>
+                <v-list-tile-title>{{ m.title }}</v-list-tile-title>
+              </v-list-tile-content>
+            </v-list-tile>
+          </v-list>
+    </v-navigation-drawer>
+
+      <v-toolbar app  fixed class="cyan darken-2">
+        <v-toolbar-side-icon @click.stop="drawer = !drawer" class="hidden-md-and-up"></v-toolbar-side-icon>
         <v-toolbar-title>
           fuchami's portfolio
         </v-toolbar-title>
@@ -12,23 +26,6 @@
             <router-link v-bind:to="m.url" tag="span">{{ m.title }}</router-link>
           </v-btn>
         </v-toolbar-items>
-
-        <v-menu button left class="hidden-md-and-up">
-          <v-btn icon>
-            <v-icon>
-              more_vert
-            </v-icon>
-          </v-btn>
-
-          <v-list>
-            <v-list-tile v-for="m in menues" :key="m">
-              <router-link v-bind:to="m.url">
-              <v-list-tile-title>{{ m.title }}</v-list-tile-title>
-              </router-link>
-            </v-list-tile>
-          </v-list>
-
-        </v-menu>
       </v-toolbar>
 
       <v-content>
@@ -62,6 +59,7 @@
 <script>
 export default {
   data: () => ({
+    drawer: false,
     links: [
       {
         icon: 'fab fa-github',
@@ -71,18 +69,22 @@ export default {
     menues: [
       {
         title: 'home',
+        icon: 'home',
         url: './'
       },
       {
         title: 'about',
+        icon: 'mdi-account',
         url: './about'
       },
       {
         title: 'skill',
+        icon: 'mdi-dumbbell',
         url: './skill'
       },
       {
         title: 'work',
+        icon: 'mdi-codepen',
         url: './work'
       }
     ]
