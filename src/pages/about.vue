@@ -2,7 +2,7 @@
   <div id='app'>
     <v-app id="inspire">
       <v-layout justify-center class="my-3">
-        <v-flex xs10 >
+        <v-flex xs11 md6 lg4>
           <v-card class="elevation-7">
             <v-card-title class="cyan darken-2">
               <div class="hedline white--text">
@@ -18,9 +18,12 @@
 
             <v-list v-for="i in items" :key="i" class="transparent">
               <v-list-tile>
-                <v-btn icon>
-                <v-icon class="cyan--text text--darken-2">{{ i.icon }}</v-icon>
-                </v-btn>
+                <v-tooltip left>
+                  <v-btn icon slot="activator" dark>
+                  <v-icon class="cyan--text text--darken-2">{{ i.icon }}</v-icon>
+                  </v-btn>
+                  <span>{{ i.tip }}</span>
+                </v-tooltip>
 
                 <v-list-tile-content>
                     {{ i.title}}
@@ -41,13 +44,13 @@ export default {
   data () {
     return {
       items: [
-        {icon: 'mdi-account', title: '二見 悠樹 (futami yuki)'},
-        {icon: 'fas fa-address-card', title: 'fuchami'},
-        {icon: 'location_on', title: 'kagoshima'},
-        {icon: 'mdi-cake', title: '1995/04/28'},
-        {icon: 'mdi-school', title: '鹿児島大学院理工学研究科 情報生体システム工学専攻'},
-        {icon: 'mdi-heart', title: 'Deep Learning / Machine Learning'},
-        {icon: 'mdi-email', title: 'sc114057[at]ibe.kagoshima-u.ac.jp'}
+        {icon: 'mdi-account', title: '二見 悠樹 (futami yuki)', tip: 'name'},
+        {icon: 'fas fa-address-card', title: 'fuchami', tip: 'handle'},
+        {icon: 'location_on', title: 'kagoshima', tip: 'location'},
+        {icon: 'mdi-cake', title: '1995/04/28', tip: 'birthday'},
+        {icon: 'mdi-school', title: '鹿児島大学院理工学研究科 情報生体システム工学専攻', tip: 'university'},
+        {icon: 'mdi-heart', title: 'Deep Learning / Machine Learning', tip: 'Interest'},
+        {icon: 'mdi-email', title: 'sc114057[at]ibe.kagoshima-u.ac.jp', tip: 'mail address'}
       ],
       links: [
         {
