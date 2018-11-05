@@ -9,7 +9,6 @@ import work from '@/pages/work'
 Vue.use(Router)
 
 export default new Router({
-  mode: 'history',
   routes: [
     {
       path: '/',
