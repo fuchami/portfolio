@@ -18,12 +18,9 @@
 
             <v-list v-for="i in items" :key="i" class="transparent">
               <v-list-tile>
-                <v-tooltip left>
-                  <v-btn icon slot="activator" dark>
+                  <v-btn icon >
                   <v-icon class="cyan--text text--darken-2">{{ i.icon }}</v-icon>
                   </v-btn>
-                  <span>{{ i.tip }}</span>
-                </v-tooltip>
 
                 <v-list-tile-content>
                     {{ i.title}}
