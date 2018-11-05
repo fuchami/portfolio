@@ -2,7 +2,7 @@
   <div id='app'>
     <v-app id="inspire">
       <v-layout justify-center class="my-3">
-        <v-flex xs11 md6 lg4>
+        <v-flex xs11>
           <v-card class="elevation-7">
             <v-card-title class="cyan darken-2">
               <div class="hedline white--text">
@@ -18,7 +18,7 @@
 
             <v-list v-for="i in items" :key="i" class="transparent">
               <v-list-tile>
-                  <v-btn icon >
+                  <v-btn icon>
                   <v-icon class="cyan--text text--darken-2">{{ i.icon }}</v-icon>
                   </v-btn>
 
