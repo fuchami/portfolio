@@ -2,7 +2,7 @@
   <div id='app'>
     <v-app id="inspire">
       <v-layout justify-center class="my-3">
-        <v-flex xs11>
+        <v-flex xs11 md6 lg4>
           <v-card class="elevation-7">
             <v-card-title class="cyan darken-2">
               <div class="hedline white--text">
