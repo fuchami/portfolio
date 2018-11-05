@@ -5,16 +5,12 @@
         <v-flex xs10 >
           <v-card class="elevation-7">
             <v-card-title class="cyan darken-2">
-                <v-icon size="48px">
-                  mdi mdi-account
-                </v-icon>
-                &emsp;&emsp;
               <div class="hedline white--text">
-                <h1>about me</h1>
+                <h2>about me</h2>
               </div>
               <v-spacer></v-spacer>
               <v-btn dark icon v-for="l in links" :key="l" class="mx3" v-bind:href="l.url" target="_blank">
-                <v-icon size="36px">
+                <v-icon size="30px">
                   {{ l.icon }}
                 </v-icon>
               </v-btn>
