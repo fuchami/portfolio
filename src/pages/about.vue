@@ -43,9 +43,9 @@ export default {
       items: [
         {icon: 'mdi-account', title: '二見 悠樹 (futami yuki)', tip: 'name'},
         {icon: 'fas fa-address-card', title: 'fuchami', tip: 'handle'},
-        {icon: 'location_on', title: 'kagoshima', tip: 'location'},
         {icon: 'mdi-cake', title: '1995/04/28', tip: 'birthday'},
-        {icon: 'mdi-school', title: '鹿児島大学院理工学研究科 情報生体システム工学専攻', tip: 'university'},
+        {icon: 'location_on', title: 'kagoshima', tip: 'location'},
+        {icon: 'mdi-school', title: 'Kagoshima University M1', tip: 'university'},
         {icon: 'mdi-heart', title: 'Deep Learning / Machine Learning', tip: 'Interest'},
         {icon: 'mdi-email', title: 'sc114057[at]ibe.kagoshima-u.ac.jp', tip: 'mail address'}
       ],

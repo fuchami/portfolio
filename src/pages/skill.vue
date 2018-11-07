@@ -3,7 +3,7 @@
     <v-app id="inspire">
       <v-timeline align-top :dense="$vuetify.breakpoint.mdAndDown" >
         <v-flex xs10 offset-xs1>
-          <v-timeline-item v-for="s in skills" :key="s" fill-dot color="cyan darken-2">
+          <v-timeline-item v-for="s in skills" :key="s" fill-dot small color="cyan darken-2">
             <v-card dark v-bind:class="s.class" xs8 md4>
               <v-card-title  class="title">
                   <v-icon size='24' class="mr-3">{{ s.icon }}</v-icon>
@@ -12,9 +12,11 @@
               <v-card-text class="white text--primary">
                 {{ s.content}}
                 <v-flex>
-                  <br>
-                  <v-chip v-for="c in s.clips" :key='c' v-bind:color="c.color" text-color="white"> {{ c.name }}
-                  </v-chip>
+                <br>
+                <v-chip v-for="c in s.clips" :key='c' v-bind:color="c.color" text-color="white">
+                  {{ c.name }}
+                </v-chip>
+
                 </v-flex>
               </v-card-text>
             </v-card>
@@ -54,7 +56,7 @@ export default {
           ]
         },
         {
-          icon: 'fas fa-terminal',
+          icon: 'fas fa-code',
           class: 'yellow darken-1',
           language: 'C',
           content: '大学の授業で2年半ほど勉強しました．OpenCVを用いた画像処理やOpenGLを用いた簡単なゲームの実装を行いました．',
@@ -71,6 +73,7 @@ export default {
           content: '基本的な知識を心得ています．',
           years: '2年半',
           clips: [
+            { color: 'purple', name: 'Bootstrap'}
           ]
         },
         {
@@ -80,7 +83,8 @@ export default {
           content: '基本的な知識を心得ています',
           years: '2年半',
           clips: [
-            { color: 'green', name: 'vue.js' }
+            { color: 'light-green', name: 'vue.js' },
+            { color: 'blue', name: 'jQuery' }
           ]
         },
         {
