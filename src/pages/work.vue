@@ -5,7 +5,7 @@
         <v-container fluid grid-list-xs>
           <v-layout wrap justify-space-around >
             <v-flex xs12 sm6 >
-              <v-card v-for="work in works" :key="work.title "class="" width="600px" hover>
+              <v-card v-for="work in works" :key="work.title" width="600px" hover>
                 <v-card-media class="" v-bind:src="work.img_url">
                   <v-container fill-height fluid>
                   </v-container>

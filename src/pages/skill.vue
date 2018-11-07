@@ -73,7 +73,7 @@ export default {
           content: '基本的な知識を心得ています．',
           years: '2年半',
           clips: [
-            { color: 'purple', name: 'Bootstrap'}
+            { color: 'purple', name: 'Bootstrap' }
           ]
         },
         {
