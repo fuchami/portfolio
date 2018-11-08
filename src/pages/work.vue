@@ -16,7 +16,8 @@
                   </v-chip>
                 </v-card-title>
                 <v-card-actions>
-                  <v-btn round color="green" v-bind:href="pix2pix.github_url" target="_blank">
+                  <v-spacer></v-spacer>
+                  <v-btn flat color="green" v-bind:href="pix2pix.github_url" target="_blank">
                     github
                   </v-btn>
                 </v-card-actions>
@@ -29,16 +30,16 @@
                 <v-card-title primary-title>
                   <h1>{{ pokeGAN.title}}</h1>
                   <p>{{ pokeGAN.content}}</p>
-                  <v-chip v-for="c in pix2pix.clips" :key='c' v-bind:color="c.color" text-color="white">
+                  <v-chip v-for="c in pokeGAN.clips" :key='c' v-bind:color="c.color" text-color="white">
                     {{ c.name }}
                   </v-chip>
                 </v-card-title>
                 <v-card-actions>
-                  <v-btn round color="green" v-bind:href="pokeGAN.github_url" target="_blank">
+                  <v-spacer></v-spacer>
+                  <v-btn flat color="green" v-bind:href="pokeGAN.github_url" target="_blank">
                     github
                   </v-btn>
                 </v-card-actions>
-                <br>
               </v-card>
             </v-flex>
             <v-flex xs12 sm6 md6 lg4 >
@@ -47,16 +48,19 @@
                 <v-card-title primary-title>
                   <h1>{{ kanabot.title}}</h1>
                   <p>{{ kanabot.content}}</p>
-                  <v-chip v-for="c in pix2pix.clips" :key='c' v-bind:color="c.color" text-color="white">
+                  <v-chip v-for="c in kanabot.clips" :key='c' v-bind:color="c.color" text-color="white">
                     {{ c.name }}
                   </v-chip>
                 </v-card-title>
                 <v-card-actions>
-                  <v-btn round color="green" v-bind:href="kanabot.github_url" target="_blank">
+                  <v-spacer></v-spacer>
+                  <v-btn flat color="blue" v-bind:href="kanabot.bot_url" target="_blank">
+                    twitter
+                  </v-btn>
+                  <v-btn flat color="green" v-bind:href="kanabot.github_url" target="_blank">
                     github
                   </v-btn>
                 </v-card-actions>
-                <br>
               </v-card>
             </v-flex>
 
@@ -72,7 +76,11 @@
                 </v-card-title>
 
                 <v-card-actions>
-                  <v-btn round color="green" v-bind:href="portfolio.github_url" target="_blank">
+                  <v-spacer></v-spacer>
+                  <v-btn flat color="blue" v-bind:href="portfolio.page_url" target="_blank">
+                    portfolio
+                  </v-btn>
+                  <v-btn flat color="green" v-bind:href="portfolio.github_url" target="_blank">
                     github
                   </v-btn>
                 </v-card-actions>
@@ -93,7 +101,7 @@ export default {
     return {
       pix2pix: {
         title: 'denoise pix2pix',
-        content: '生成モデルを用いて画像に付与しているノイズ(ごま塩ノイズ)を除去を行いました.モデルにはGANと呼ばれる生成モデルのひとつであるpix2pixを使用しています．',
+        content: '生成モデルを用いて画像に付与している小さなノイズ(ごま塩ノイズ)を除去を行いました.非常に高いクオリティでノイズを除去することができます．pix2pixと呼ばれるニューラルネットワークのモデルを採用しています．',
         img_url: 'pix2pix.png',
         github_url: 'https://github.com/fuchami/denoise_pix2pix',
         clips: [
@@ -104,29 +112,34 @@ export default {
       },
       pokeGAN: {
         title: 'pokemon GAN',
-        content: 'DCGANを用いてポケモンのドット絵を生成するモデルを作りました',
+        content: 'ポケモンっぽいドット絵を生成するモデルを作りました.DCGANと呼ばれるニューラルネットワーク生成モデルを実装し，モデルの学習を行いました．ポケモンのドット絵は画像処理により水増しを行うことで学習データ数を増強しています．',
         img_url: 'pokeGAN.png',
         github_url: 'https:/github.com/fuchami/pokeGAN',
         clips: [
-
+          { color: 'red darken-1', name: 'keras' },
+          { color: 'orange', name: 'tensorflow' },
+          { color: 'green', name: 'openCV' }
         ]
       },
       portfolio: {
         title: 'ポートフォリオ',
-        content: '自身のポートフォリオサイトです．仕様としてSPA・レスポンシブ対応を目指しました．',
+        content: '自身のポートフォリオサイトです．Vue.jsの勉強も兼ねて制作しました．マテリアルデザインを基本としたレスポンシブデザインを目指しました．vue-routerを用いたSPAの実装も行っています．',
         img_url: 'portfolio.png',
         github_url: 'https:/github.com/fuchami/portfolio',
+        page_url: 'https://fuchami.github.io/portfolio/#/',
         clips: [
-
+          { color: 'light-green', name: 'vue.js' }
         ]
 
       },
       kanabot: {
         title: '西野カナ風歌詞生成bot',
-        content: 'TwitterAPIを用いて西野カナの楽曲の歌詞を収集し，それらを元に西野カナ風の歌詞をツイートするbotです．現在停止中',
+        content: '大学の自然言語処理の課題で制作したものです．TwitterAPIを用いて西野カナの楽曲の歌詞を収集し，それらを元に西野カナ風の歌詞をツイートするbotです．現在停止中',
         img_url: 'kana.png',
+        github_url: 'https://github.com/fuchami/kana_bot',
+        bot_url: 'https://twitter.com/nlp2016test',
         clips: [
-
+          { color: 'blue', name: 'Twitter API' }
         ]
       }
     }
