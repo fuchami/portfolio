@@ -1,7 +1,7 @@
 <template>
   <div id=app>
     <v-app id="inspire">
-      <v-navigation-drawer floating fixed v-model="drawer" app class="hidden-md-and-up">
+      <v-navigation-drawer floating fixed v-model="drawer" app class="hidden-md-and-up" disable-resize-watcher="false">
           <v-list dense class="pt-0">
             <v-list-tile v-for="m in menues" :key="m" flat :to="{path: m.url}">
               <v-list-tile-action>
@@ -90,9 +90,8 @@ export default {
         url: './work'
       }
     ]
-
   })
-}
+};
 </script>
 
 <style>

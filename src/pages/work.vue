@@ -2,10 +2,10 @@
   <div id='app'>
     <v-app id="inspire" >
       <v-content>
-        <v-container fluid grid-list-xs>
+        <v-container fluid grid-list-xl>
           <v-layout wrap justify-space-around >
-            <v-flex xs12 sm6 >
-              <v-card v-for="work in works" :key="work.title" width="600px" hover>
+            <v-flex v-for="work in works" :key="work">
+              <v-card width="600px" hover>
                 <v-card-media class="" v-bind:src="work.img_url">
                   <v-container fill-height fluid>
                   </v-container>
