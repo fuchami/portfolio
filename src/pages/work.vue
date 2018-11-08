@@ -3,33 +3,25 @@
     <v-app id="inspire" >
       <v-content>
         <v-container fluid grid-list-xl>
-          <v-layout wrap justify-space-around >
-            <v-flex v-for="work in works" :key="work">
-              <v-card width="600px" hover>
-                <v-card-media class="" v-bind:src="work.img_url">
-                  <v-container fill-height fluid>
-                  </v-container>
-                </v-card-media>
+          <v-layout wrap justify-space-between >
+            <v-flex xs12 sm6 md6 lg4 v-for="work in works" :key="work">
+              <v-card elevation-3 hover>
+                <v-img v-bind:src="work.img_url" aspect-ration="2.75"></v-img>
 
                 <v-card-title primary-title>
-                  <h1>
-                    {{ work.title}}
-                  </h1>
-                  <p>
-                    {{ work.content}}
-                  </p>
+                  <h1>{{ work.title}}</h1>
+                  <p>{{ work.content}}</p>
                   <v-chip v-for="c in work.clips" :key='c' v-bind:color="c.color" text-color="white">
                     {{ c.name }}
                   </v-chip>
                 </v-card-title>
 
-                <v-layout  justify-end>
-                  <v-card-actions>
-                    <v-btn color="green" v-bind:href="work.github_url" target="_blank">
-                      github
-                    </v-btn>
-                  </v-card-actions>
-                </v-layout>
+                <v-card-actions>
+                  <v-btn round color="green" v-bind:href="work.github_url" target="_blank">
+                    github
+                  </v-btn>
+                </v-card-actions>
+                <br>
 
               </v-card>
             </v-flex>
