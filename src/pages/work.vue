@@ -101,7 +101,7 @@ export default {
     return {
       pix2pix: {
         title: 'denoise pix2pix',
-        content: '生成モデルを用いて画像に付与している小さなノイズ(ごま塩ノイズ)を除去を行いました.非常に高いクオリティでノイズを除去することができます．pix2pixと呼ばれるニューラルネットワークのモデルを採用しています．',
+        content: '生成モデルを用いて画像に付与している小さなノイズ(ごま塩ノイズ)除去を行いました.非常に高いクオリティでノイズを除去することができます．pix2pixと呼ばれるニューラルネットワークのモデルを採用しています．',
         img_url: 'pix2pix.png',
         github_url: 'https://github.com/fuchami/denoise_pix2pix',
         clips: [
@@ -114,7 +114,7 @@ export default {
         title: 'pokemon GAN',
         content: 'ポケモンっぽいドット絵を生成するモデルを作りました.DCGANと呼ばれるニューラルネットワーク生成モデルを実装し，モデルの学習を行いました．ポケモンのドット絵は画像処理により水増しを行うことで学習データ数を増強しています．',
         img_url: 'pokeGAN.png',
-        github_url: 'https:/github.com/fuchami/pokeGAN',
+        github_url: 'https://github.com/fuchami/pokeGAN',
         clips: [
           { color: 'red darken-1', name: 'keras' },
           { color: 'orange', name: 'tensorflow' },
@@ -125,7 +125,7 @@ export default {
         title: 'ポートフォリオ',
         content: '自身のポートフォリオサイトです．Vue.jsの勉強も兼ねて制作しました．マテリアルデザインを基本としたレスポンシブデザインを目指しました．vue-routerを用いたSPAの実装も行っています．',
         img_url: 'portfolio.png',
-        github_url: 'https:/github.com/fuchami/portfolio',
+        github_url: 'https://github.com/fuchami/portfolio',
         page_url: 'https://fuchami.github.io/portfolio/#/',
         clips: [
           { color: 'light-green', name: 'vue.js' }
@@ -134,7 +134,7 @@ export default {
       },
       kanabot: {
         title: '西野カナ風歌詞生成bot',
-        content: '大学の自然言語処理の課題で制作したものです．TwitterAPIを用いて西野カナの楽曲の歌詞を収集し，それらを元に西野カナ風の歌詞をツイートするbotです．現在停止中',
+        content: '大学の自然言語処理の課題で制作したものです．TwitterAPIを用いて西野カナの楽曲の歌詞を収集し，それらを元に西野カナ風の歌詞をツイートするbotです．歌詞は分かち書きした単語をN-gramにて生成しています．現在停止中',
         img_url: 'kana.png',
         github_url: 'https://github.com/fuchami/kana_bot',
         bot_url: 'https://twitter.com/nlp2016test',
