@@ -36,7 +36,7 @@ export default {
           icon: 'fab fa-python',
           class: 'blue darken-2',
           language: 'python',
-          content: '私が最もよく使用する言語です．主にkeras/tensorflowを使ったDeep Learningの実装を行っています．Twitter APIを使ったbotの開発や進化計算の実装も行いました．',
+          content: '私が最もよく使用する言語です．主にkeras/tensorflowを使ったDeep Learningの実装を行っています．Twitter APIを使ったbotの開発や進化計算の実装も行いました．画像処理やファイルの一括操作も行います',
           years: '3年',
           clips: [
             { color: 'red darken-1', name: 'keras' },
@@ -59,7 +59,7 @@ export default {
           icon: 'fas fa-code',
           class: 'yellow darken-1',
           language: 'C',
-          content: '大学の授業で2年半ほど勉強しました．OpenCVを用いた画像処理やOpenGLを用いた簡単なゲームの実装を行いました．',
+          content: '大学の授業で2年半ほど勉強しました．OpenCVを用いた画像処理やOpenGLを用いた簡単なゲームの制作などに使用しました.',
           years: '2年半',
           clips: [
             { color: 'green', name: 'openCV' },
@@ -70,8 +70,8 @@ export default {
           icon: 'fab fa-html5',
           class: 'deep-orange darken-1',
           language: 'HTML / CSS',
-          content: '基本的な知識を習得しています',
-          years: '1年半',
+          content: 'インターン先にてWebページの制作に使用しています',
+          years: '1年',
           clips: [
             { color: 'purple', name: 'Bootstrap' }
           ]
@@ -80,8 +80,8 @@ export default {
           icon: 'fab fa-js-square',
           class: 'amber darken-1',
           language: 'javascript',
-          content: '基本的な知識を習得しています',
-          years: '2年半',
+          content: 'インターン先にてWebページの制作に使用しています．vue.jsを用いて簡単なWebページの制作も行いました．',
+          years: '1年',
           clips: [
             { color: 'light-green', name: 'vue.js' },
             { color: 'blue', name: 'jQuery' }
@@ -92,7 +92,7 @@ export default {
           class: 'green',
           language: 'Github',
           content: 'gitの基本的な使い方を習得しています．複数人での開発経験もあります．',
-          years: '2年半'
+          years: '1年'
         }
       ]
     }
