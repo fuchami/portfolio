@@ -2,8 +2,24 @@
   <div id='app'>
     <v-app id="inspire" >
       <v-content>
-        <v-container fluid grid-list-xl>
+        <v-container fluid grid-list-xm>
           <v-layout wrap justify-space-between >
+
+            <v-flex xs12 sm6 md4 lg3 >
+              <v-card elevation-3 hover>
+                <v-img v-bind:src="getImgUrl(research.img_url)" aspect-ration="2.75"></v-img>
+                <v-card-title primary-title>
+                  <h1>{{ research.title}}</h1>
+                  <p>{{ research.content}}</p>
+                  <v-chip v-for="c in pix2pix.clips" :key='c' v-bind:color="c.color" text-color="white">
+                    {{ research.name }}
+                  </v-chip>
+                </v-card-title>
+                <v-card-actions>
+                  <v-spacer></v-spacer>
+                </v-card-actions>
+              </v-card>
+            </v-flex>
 
             <v-flex xs12 sm6 md6 lg4 >
               <v-card elevation-3 hover>
@@ -99,6 +115,16 @@
 export default {
   data () {
     return {
+      research: {
+        title: '自動ショット分割',
+        content: '研究',
+        img_url: 'shot_detection.png',
+        clips: [
+          { color: 'red darken-1', name: 'keras' },
+          { color: 'orange', name: 'tensorflow' },
+          { color: 'green', name: 'openCV' }
+        ]
+      },
       pix2pix: {
         title: 'denoise pix2pix',
         content: '生成モデルを用いて画像に付与している小さなノイズ(ごま塩ノイズ)除去を行いました.非常に高いクオリティでノイズを除去することができます．pix2pixと呼ばれるニューラルネットワークのモデルを採用しています．',
