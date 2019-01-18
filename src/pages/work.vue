@@ -5,22 +5,6 @@
         <v-container fluid grid-list-xm>
           <v-layout wrap justify-space-between >
 
-            <v-flex xs12 sm6 md4 lg3 >
-              <v-card elevation-3 hover>
-                <v-img v-bind:src="getImgUrl(research.img_url)" aspect-ration="2.75"></v-img>
-                <v-card-title primary-title>
-                  <h1>{{ research.title}}</h1>
-                  <p>{{ research.content}}</p>
-                  <v-chip v-for="c in pix2pix.clips" :key='c' v-bind:color="c.color" text-color="white">
-                    {{ research.name }}
-                  </v-chip>
-                </v-card-title>
-                <v-card-actions>
-                  <v-spacer></v-spacer>
-                </v-card-actions>
-              </v-card>
-            </v-flex>
-
             <v-flex xs12 sm6 md6 lg4 >
               <v-card elevation-3 hover>
                 <v-img v-bind:src="getImgUrl(pix2pix.img_url)" aspect-ration="2.75"></v-img>
