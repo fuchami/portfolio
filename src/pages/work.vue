@@ -2,7 +2,7 @@
   <div id='app'>
     <v-app id="inspire" >
       <v-content>
-        <v-container fluid grid-list-xm>
+        <v-container fluid grid-list-xl>
           <v-layout wrap justify-space-between >
 
             <v-flex xs12 sm6 md6 lg4 >
