@@ -115,16 +115,6 @@
 export default {
   data () {
     return {
-      research: {
-        title: '自動ショット分割',
-        content: '研究',
-        img_url: 'shot_detection.png',
-        clips: [
-          { color: 'red darken-1', name: 'keras' },
-          { color: 'orange', name: 'tensorflow' },
-          { color: 'green', name: 'openCV' }
-        ]
-      },
       pix2pix: {
         title: 'denoise pix2pix',
         content: '生成モデルを用いて画像に付与している小さなノイズ(ごま塩ノイズ)除去を行いました.非常に高いクオリティでノイズを除去することができます．pix2pixと呼ばれるニューラルネットワークのモデルを採用しています．',
