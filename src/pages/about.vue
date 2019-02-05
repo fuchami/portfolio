@@ -47,7 +47,7 @@ export default {
         {icon: 'location_on', title: 'kagoshima', tip: 'location'},
         {icon: 'mdi-school', title: 'Kagoshima University M1', tip: 'university'},
         {icon: 'mdi-heart', title: 'Deep Learning / Machine Learning', tip: 'Interest'},
-        {icon: 'mdi-email', title: 'sc114057[at]ibe.kagoshima-u.ac.jp', tip: 'mail address'}
+        {icon: 'mdi-email', title: 'fuchami[at]icloud.com', tip: 'mail address'}
       ],
       links: [
         {

@@ -3,11 +3,32 @@
     <v-app id="inspire" >
       <v-content>
         <v-container fluid grid-list-xl>
-          <v-layout wrap justify-space-between >
+          <v-layout wrap >
 
+            <!-- pokemon GAN-->
             <v-flex xs12 sm6 md6 lg4 >
               <v-card elevation-3 hover>
-                <v-img v-bind:src="getImgUrl(pix2pix.img_url)" aspect-ration="2.75"></v-img>
+                <v-img v-bind:src="getImgUrl(pokeGAN.img_url)" ></v-img>
+                <v-card-title primary-title>
+                  <h1>{{ pokeGAN.title}}</h1>
+                  <p>{{ pokeGAN.content}}</p>
+                  <v-chip v-for="c in pokeGAN.clips" :key='c' v-bind:color="c.color" text-color="white">
+                    {{ c.name }}
+                  </v-chip>
+                </v-card-title>
+                <v-card-actions>
+                  <v-spacer></v-spacer>
+                  <v-btn flat color="green" v-bind:href="pokeGAN.github_url" target="_blank">
+                    github
+                  </v-btn>
+                </v-card-actions>
+              </v-card>
+            </v-flex>
+
+            <!-- denoise pix2pix-->
+            <v-flex xs12 sm6 md6 lg4 >
+              <v-card elevation-3 hover>
+                <v-img v-bind:src="getImgUrl(pix2pix.img_url)" aspect-ration=""></v-img>
                 <v-card-title primary-title>
                   <h1>{{ pix2pix.title}}</h1>
                   <p>{{ pix2pix.content}}</p>
@@ -24,27 +45,10 @@
               </v-card>
             </v-flex>
 
+            <!-- 西野カナbot -->
             <v-flex xs12 sm6 md6 lg4 >
               <v-card elevation-3 hover>
-                <v-img v-bind:src="getImgUrl(pokeGAN.img_url)" aspect-ration="2.75"></v-img>
-                <v-card-title primary-title>
-                  <h1>{{ pokeGAN.title}}</h1>
-                  <p>{{ pokeGAN.content}}</p>
-                  <v-chip v-for="c in pokeGAN.clips" :key='c' v-bind:color="c.color" text-color="white">
-                    {{ c.name }}
-                  </v-chip>
-                </v-card-title>
-                <v-card-actions>
-                  <v-spacer></v-spacer>
-                  <v-btn flat color="green" v-bind:href="pokeGAN.github_url" target="_blank">
-                    github
-                  </v-btn>
-                </v-card-actions>
-              </v-card>
-            </v-flex>
-            <v-flex xs12 sm6 md6 lg4 >
-              <v-card elevation-3 hover>
-                <v-img v-bind:src="getImgUrl(kanabot.img_url)" aspect-ration="2.75"></v-img>
+                <v-img v-bind:src="getImgUrl(kanabot.img_url)" aspect-ration=""></v-img>
                 <v-card-title primary-title>
                   <h1>{{ kanabot.title}}</h1>
                   <p>{{ kanabot.content}}</p>
@@ -64,9 +68,10 @@
               </v-card>
             </v-flex>
 
+            <!-- portfolio -->
             <v-flex xs12 sm6 md6 lg4 >
               <v-card elevation-3 hover>
-                <v-img v-bind:src="getImgUrl(portfolio.img_url)" aspect-ration="2.75"></v-img>
+                <v-img v-bind:src="getImgUrl(portfolio.img_url)" aspect-ration=""></v-img>
                 <v-card-title primary-title>
                   <h1>{{ portfolio.title}}</h1>
                   <p>{{ portfolio.content}}</p>
@@ -74,7 +79,6 @@
                     {{ c.name }}
                   </v-chip>
                 </v-card-title>
-
                 <v-card-actions>
                   <v-spacer></v-spacer>
                   <v-btn flat color="blue" v-bind:href="portfolio.page_url" target="_blank">
@@ -85,9 +89,34 @@
                   </v-btn>
                 </v-card-actions>
                 <br>
-
               </v-card>
             </v-flex>
+
+            <!-- 平成最後のジェネレーター-->
+            <v-flex xs12 sm6 md6 lg4 >
+              <v-card elevation-3 hover>
+                <v-img v-bind:src="getImgUrl(heisei.img_url)" aspect-ration=""></v-img>
+                <v-card-title primary-title>
+                  <h1>{{ heisei.title}}</h1>
+                  <p>{{ heisei.content}}</p>
+                  <v-chip v-for="c in heisei.clips" :key='c' v-bind:color="c.color" text-color="white">
+                    {{ c.name }}
+                  </v-chip>
+                </v-card-title>
+                <v-card-actions>
+                  <v-spacer></v-spacer>
+                  <v-btn flat color="blue" v-bind:href="heisei.page_url" target="_blank">
+                    Link
+                  </v-btn>
+                  <v-btn flat color="green" v-bind:href="heisei.github_url" target="_blank">
+                    github
+                  </v-btn>
+                </v-card-actions>
+                <br>
+              </v-card>
+            </v-flex>
+
+
           </v-layout>
         </v-container>
       </v-content>
@@ -113,7 +142,7 @@ export default {
       pokeGAN: {
         title: 'pokemon GAN',
         content: 'ポケモンっぽいドット絵を生成するモデルを作りました.DCGANと呼ばれるニューラルネットワーク生成モデルを実装し，モデルの学習を行いました．ポケモンのドット絵は画像処理により水増しを行うことで学習データ数を増強しています．',
-        img_url: 'pokeGAN.png',
+        img_url: 'pokemon.png',
         github_url: 'https://github.com/fuchami/pokeGAN',
         clips: [
           { color: 'red darken-1', name: 'keras' },
@@ -129,6 +158,17 @@ export default {
         page_url: 'https://fuchami.github.io/portfolio/#/',
         clips: [
           { color: 'light-green', name: 'vue.js' }
+        ]
+
+      },
+      heisei: {
+        title: '平成最後のジェネレーター',
+        content: 'Flaskの勉強で作りました。wikipediaから拾ってきたワードをもとに、『平成最後の〇〇』とつぶやけます。',
+        img_url: 'heisei.png',
+        github_url: 'https://github.com/fuchami/heisei_generator',
+        page_url: 'https://desolate-fjord-79266.herokuapp.com/',
+        clips: [
+          { color: 'red darken-3', name: 'Flask' }
         ]
 
       },

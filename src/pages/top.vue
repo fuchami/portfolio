@@ -27,7 +27,7 @@
                 </v-list-tile-action>
                 <v-list-tile-content>
                   <v-list-tile-title>
-                    sc114057[at]ibe.kagoshima-u.ac.jp
+                    fuchami[at]icloud.com
                   </v-list-tile-title>
                 </v-list-tile-content>
               </v-list-tile>
