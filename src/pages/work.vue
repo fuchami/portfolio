@@ -38,7 +38,7 @@ export default {
         {
           title: '学部判定LINE bot',
           content: '畳み込みニューラルネットワーク(MobileNet)を転移学習させて工学部と法学部の学生の顔画像を学習させました。送信された顔画像を元にどの学部っぽいかを返すジョークアプリです。',
-          img_url: 'https://raw.githubusercontent.com/fuchami/portfolio/master/src/assets/images/pix2pix.png',
+          img_url: 'https://raw.githubusercontent.com/fuchami/portfolio/master/src/assets/images/gakubu.png',
           github_url: 'https://github.com/fuchami/Undergraduate_classification',
           clips: [
             { color: 'red darken-1', name: 'keras' },
