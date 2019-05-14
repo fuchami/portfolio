@@ -22,8 +22,8 @@
         <v-spacer></v-spacer>
 
         <v-toolbar-items class="hidden-sm-and-down">
-          <v-btn v-for="m in menues" :key="m" flat >
-            <router-link v-bind:to="m.url" tag="span">{{ m.title }}</router-link>
+          <v-btn v-for="menu in menues" :key="menu" :to="menu.url" flat>
+            {{ menu.title }}
           </v-btn>
         </v-toolbar-items>
       </v-toolbar>
@@ -72,22 +72,22 @@ export default {
       {
         title: 'home',
         icon: 'home',
-        url: './'
+        url: '/'
       },
       {
         title: 'about',
         icon: 'mdi-account',
-        url: './about'
+        url: '/about'
       },
       {
         title: 'skill',
         icon: 'mdi-dumbbell',
-        url: './skill'
+        url: '/skill'
       },
       {
         title: 'work',
         icon: 'mdi-codepen',
-        url: './work'
+        url: '/work'
       }
     ]
   })
