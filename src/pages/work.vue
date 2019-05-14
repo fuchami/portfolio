@@ -36,6 +36,17 @@ export default {
     return {
       works: [
         {
+          title: '学部判定LINE bot',
+          content: '畳み込みニューラルネットワーク(MobileNet)を転移学習させて工学部と法学部の学生の顔画像を学習させました。送信された顔画像を元にどの学部っぽいかを返すジョークアプリです。',
+          img_url: 'https://raw.githubusercontent.com/fuchami/portfolio/master/src/assets/images/pix2pix.png',
+          github_url: 'https://github.com/fuchami/Undergraduate_classification',
+          clips: [
+            { color: 'red darken-1', name: 'keras' },
+            { color: 'orange', name: 'tensorflow' },
+            { color: 'red darken-3', name: 'Flask' }
+          ]
+        },
+        {
           title: 'denoise pix2pix',
           content: '生成モデルを用いて画像に付与している小さなノイズ(ごま塩ノイズ)除去を行いました。非常に高いクオリティでノイズを除去することができます。pix2pixと呼ばれるニューラルネットワークのモデルを採用しています。',
           img_url: 'https://raw.githubusercontent.com/fuchami/portfolio/master/src/assets/images/pix2pix.png',
@@ -49,7 +60,7 @@ export default {
         {
           title: 'pokemon GAN',
           content: 'ポケモンっぽいドット絵を生成するモデルを作りました。DCGANと呼ばれるニューラルネットワーク生成モデルを実装し。モデルの学習を行いました。ポケモンのドット絵は画像処理により水増しを行うことで学習データ数を増強しています。',
-          img_url: 'https://raw.githubusercontent.com/fuchami/portfolio/master/src/assets/images/pokeGAN.png',
+          img_url: 'https://raw.githubusercontent.com/fuchami/portfolio/master/src/assets/images/pokemon.png',
           github_url: 'https://github.com/fuchami/pokeGAN',
           clips: [
             { color: 'red darken-1', name: 'keras' },
